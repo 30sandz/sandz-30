@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Gruppo&family=Oswald:wght@200;400&family=Plus+Jakarta+Sans:ital,wght@1,800&family=Roboto+Condensed:wght@700&display=swap');
+
+* {
+    margin: 0px;
+}
+
+.con {
+    position: fixed;
+    z-index: 100;
+    background-color: rgba(31, 30, 30, 0.703);
+    color: white;
+    font-family: 'Cabin', sans-serif;
+    width: 100vw;
+}
+
+.word {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7vh;
+    font-size: larger;
+    border-bottom: solid whitesmoke;
+    text-shadow: 1px 1px 10px rgb(13, 6, 6);
+}
+
+.title {
+    z-index: 100;
+}
+
+
+.link {
+    font-size: small;
+}
+.link a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav {
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5vh;
+}
+
+.exp {
+    transition: 2s;
+    display: none;
+}
+
+
+
+
+@media screen and (max-width: 425px) {
+
+
+    .word {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0vh 1vw;
+    }
+    .link {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+        height: 1vh;
+    }
+
+    .exp {
+        z-index: 100;
+        border-radius: 1vh;
+        background: rgba(221, 221, 221, 0.829);
+        font-size: medium;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 1.5vh;
+        left: 77vw;
+        padding: 0vh 2vw;
+    }
+
+    .exp a {
+        text-decoration: none;
+        color: rgba(19, 15, 15, 0.783);
+    }
+
+    .exp a:hover {
+        color: rgba(19, 15, 15, 0.783);
+        text-decoration: none;
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+
+        .exp {
+            left: 72vw;
+        }
+}

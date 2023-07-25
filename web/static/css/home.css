@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Gruppo&family=Montserrat:wght@300;400&family=Open+Sans:wght@300&family=Oswald:wght@200;400&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@1,800&family=Roboto+Condensed:wght@700&display=swap');
+
+
+.content {
+    z-index: 50;
+    position: relative;
+    top: 0vh;
+    height: 100vh;
+    width: 100vw;
+}
+
+.con-1 {
+    background: url(../img/skybg2.png);
+    background-size: cover;
+}
+
+.home {
+    position: relative;
+    top: 40vh;
+    height: 20vh;
+}
+
+.name {
+    text-shadow: 1px 1px 5px white;
+    height: 10vh;
+    color: rgb(65, 52, 52);
+    font-family: 'Pacifico', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    font-size: 5vh;
+    
+}
+
+.subname {
+    width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 350;
+    font-size: 2.2vh;
+    position: relative;
+    top: 1vh;
+    left: 30vw;
+    color:black;
+}
+
+.subtitle {
+    width: 40vw;
+    height: 5vh;
+    display: flex;
+    justify-content: center;
+    vertical-align:top;
+    font-weight: 375;
+    font-size: 2.5vh;
+    position: relative;
+    top: 1vh;
+    left: 30vw;
+    color: black;
+    text-shadow: 7px 7px 3px black;
+}
+
+.con-2 {
+    background: url(../img/huskybg.jpg);
+    background-size: cover;
+}
+
+.cm-pg {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.576);
+    height: 100vh;
+    position: relative;
+    top: 0vh;
+}
+
+.cm{
+    height: 90vh;
+    position: relative;
+    top: 10vh;
+}
+
+.hl {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.headline {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    padding: 0vh 2vw;
+}
+
+.para {
+    font-family: 'Montserrat', sans-serif;
+    height: 85vh;
+    padding: 2vh 10vw 0vh 10vw;
+    font-size: 2.3vh;
+}
+
+.extra {
+    padding: 1vh 0vw 0vh 0vw;
+}
+
+.con-3 {
+    background: url(../img/sandzbg-lg.png);
+    background-size: cover;
+
+}
+
+.work {
+    background-color: rgba(0, 0, 0, 0.697);
+    backdrop-filter: blur(2px);
+}
+
+.topic {
+    position: relative;
+}
+
+.image {
+    overflow-x: scroll;
+    border: solid red;
+    display: inline-flex;
+    position: relative;
+    top: 7vh;
+    height: 55vh;
+    width: 90vw;
+}
+
+.image::-webkit-scrollbar {
+    display: none;
+}
+
+.slider-item {
+    padding: 0vh 5vw;
+}
+
+.slider-number {
+    position: relative;
+    top: -12vh;
+    color: #555;
+    text-align: center;
+}
+
+.btn-number {
+    margin: 5px;
+    padding: 5px 12px;
+    border-radius: 25px;
+    width: 7vw;
+}
+
+.btn-number.active {
+    box-shadow: 1px 1px 5px white;
+    width: 10vw;
+    font-size: 14px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 320px) {
+
+    .para {
+        font-size: 2.15vh;
+    }
+
+    .extra {
+        padding: 1vh 0vw 0vh 0vw;
+    }
+    .slider-number{
+        position: relative;
+        top: -17vh;
+
+    }
+
+    .btn-number {
+        width: 10vw;
+    }
+
+    .btn-number.active {
+        width: 12vw;
+    }
+
+}
+
+@media screen and (min-width: 424px ){
+
+    .para {
+        font-size: 2.36vh;
+        padding: 3vh 13vw 0vh 13vw;
+    }
+}

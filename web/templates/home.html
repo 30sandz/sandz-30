@@ -13,7 +13,7 @@
 
 {% block content %}
 <div class="page">
-    <div class="content con-1">
+    <div class="content con-1" id="home">
         <div class="home">
             <div class="name">
                 I'm Sandeep
@@ -54,7 +54,7 @@
             <div class="container cm work-pg">
                 <div class="row-auto">
                     <div class="col hl">
-                        <div class="headline">WORK</div>
+                        <div class="headline work-hl">WORK</div>
                     </div>
                 </div>
                 <div class="row">
@@ -62,7 +62,7 @@
                         <div class="top">Web designs</div>
                     </div>
                 </div>
-                <div class="row image">
+                <div class="row image slider">
                     {% for image in images %}
                         <div class="col-12 slider-item">
                             <img src="{{ url_for('static', filename='work/' + image) }}" class="img-thumbnail">
@@ -70,11 +70,60 @@
                     {% endfor %}
                 </div>
                 <div class="row scroll">
-                    <div class="slider-number mt-4">
-                        {% for i in range(1, images|length + 1) %}
-                            <button class="btn btn-light btn-number btn-sm">{{ i }}</button>
-                        {% endfor %}
-                    </div>
+                    <div class="slider-number-buttons mt-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact">
+        <div class="container"  id="contact"></div>
+            <div class="row join">
+                <div class="col hl join-text">JOIN WITH US</div>
+            </div>
+            <div class="row join-con">
+                <div class="col need one">
+                    <a href="https://instagram.com/_gagaan_">
+                        <img src="{{ url_for('static',filename='img/join-img.png')}}" alt="" class="join-img">
+                        <div class="text tuto">
+                            I need a website
+                        </div>
+                    </a>
+                </div>
+                <div class="col need two">
+                    <a href="https://instagram.com/_gagaan_">
+                        <img src="{{ url_for('static',filename='img/join-img-tuto.png')}}" alt="" class="join-img proff">
+                        <div class="text tuto">
+                            I need a tutorial
+                        </div>
+                    </a>
+                </div>
+                <div class="col need three">
+                    <a href="https://instagram.com/_gagaan_">
+                        <img src="{{ url_for('static',filename='img/join-img-team.png')}}" alt="" class="join-img three-img proff"> 
+                        <div class="text tuto-1">
+                            I wanna work <br> &nbsp; &nbsp; with you
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row join-1">
+                <div class="col top hl">REACH ME</div>
+            </div>
+            <div class="row join-con">
+                <div class="col reach">
+                    <a href="https://instagram.com/30_sandz">
+                        <div class="text re-text">PERSONAL</div>
+                        <img src="{{ url_for('static',filename='img/sandz-bg.png')}}" alt="" class="join-img proff">
+                        <div class="text re-text">30_sandz</div>
+                    </a>
+                </div>
+                <div class="col reach">
+                    <a href="https://instagram.com/_gagaan_">
+                        <div class="text re-text">PROFESSIONAL</div>
+                        <img src="{{ url_for('static',filename='img/gagaan-logo.png')}}" alt="" class="join-img proff">
+                        <div class="text re-text">_gagaan_</div>
+                    </a>
                 </div>
             </div>
         </div>

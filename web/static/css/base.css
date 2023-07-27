@@ -30,11 +30,20 @@
 
 
 .link {
-    font-size: small;
+    font-size: 2vh;
 }
 .link a {
     color: white;
     text-decoration: none;
+}
+
+.link a:hover {
+    transition: 500ms;
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+    transform: scaleY(20%);
+    text-shadow: 1px 1px 10px white;
 }
 
 .nav {
@@ -101,4 +110,10 @@
         .exp {
             left: 72vw;
         }
+}
+
+@media screen and (min-width: 768px) {
+    .word {
+        height: 5vh;
+    }
 }

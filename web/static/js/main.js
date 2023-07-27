@@ -1,7 +1,6 @@
 $(document).ready(function() {
-    const slider = $('.slide');
-    const numberButtons = $('.btn-number');
-    
+    const slider = $('.slider');
+    const sliderNumberButtons = $('.slider-number-buttons');
 
     slider.slick({
         dots: false,
@@ -11,44 +10,55 @@ $(document).ready(function() {
         cssEase: 'linear'
     });
 
-    numberButtons.on('click', function() {
-        const number = parseInt($(this).text()) - 1;
-        slider.slick('slickGoTo', number);
+    slider.on('init reInit afterChange', function(event, slick, currentSlide) {
+        // Update the numbered buttons on slide changes
+        updateSliderNumberButtons(slick, currentSlide);
     });
 
-    slider.on('afterChange', function(event, slick, currentSlide) {
-        // Update active number button
-        numberButtons.removeClass('active');
-        numberButtons.eq(currentSlide).addClass('active');
-    });
+    function updateSliderNumberButtons(slick, currentSlide) {
+        // Clear existing buttons
+        sliderNumberButtons.empty();
 
-    // Add the active class to the first number button initially
-    numberButtons.eq(0).addClass('active');
+        // Get the total number of slides (images)
+        const totalSlides = slick.slideCount;
+
+        // Create numbered buttons for each slide
+        for (let i = 0; i < totalSlides; i++) {
+            const button = $('<button></button>')
+                .text(i + 1)
+                .attr('data-slide-index', i)
+                .addClass('btn btn-sm btn-outline');
+
+            // Highlight the button corresponding to the current slide
+            if (i === currentSlide) {
+                button.addClass('active');
+            }
+
+            // Add click event to navigate to the slide
+            button.on('click', function() {
+                const slideIndex = $(this).data('slide-index');
+                slider.slick('slickGoTo', slideIndex);
+            });
+
+            // Append the button to the slider number buttons container
+            sliderNumberButtons.append(button);
+        }
+    }
+
+    // Initialize the numbered buttons
+    updateSliderNumberButtons(slider.slick('getSlick'), 0);
 });
 
-const gmailIcon = document.querySelector('.gmail-icon');
-const instagramIcon = document.querySelector('.instagram-icon');
-const popup = document.getElementById('popup');
-const popupTitle = document.getElementById('popup-title');
-const popupId = document.getElementById('popup-id');
-
-gmailIcon.addEventListener('click', () => {
-    showPopup('Gmail ID', 'your.email@gmail.com');
-    // Uncomment the line below to send an email
-    window.location.href = 'mailto:your.email@gmail.com';
-});
-
-instagramIcon.addEventListener('click', () => {
-    showPopup('Instagram ID', 'your_instagram_id');
-    // Uncomment the line below to open the Instagram messaging page
-    window.location.href = 'https://www.instagram.com/your_instagram_id/';
-});
-
-function showPopup(title, id) {
-    popupTitle.textContent = title;
-    popupId.textContent = id;
-    popup.style.display = 'block';
-    setTimeout(() => {
-        popup.style.display = 'none';
-    }, 2000);
-}
+document.addEventListener("DOMContentLoaded", function () {
+    const textElement = document.querySelector(".about-pg");
+    const revealPosition = textElement.getBoundingClientRect().top + window.pageYOffset; // Get the top position of the text relative to the viewport
+  
+    function revealTextOnScroll() {
+      if (window.pageYOffset >= revealPosition - window.innerHeight + 100) { // Adjust the 100 value as needed to control the delay
+        textElement.style.opacity = "1";
+        textElement.style.transform = "translateY(0)";
+      }
+    }
+  
+    window.addEventListener("scroll", revealTextOnScroll);
+  });

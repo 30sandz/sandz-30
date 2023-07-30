@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Gruppo&family=Montserrat:wght@300;400&family=Open+Sans:wght@300&family=Oswald:wght@200;400&family=Pacifico&family=Plus+Jakarta+Sans:ital,wght@1,800&family=Roboto+Condensed:wght@700&family=Ysabeau+Office:wght@700&display=swap');
-
 .page {
     overflow-x: hidden;
 }
-
 .content {
     z-index: 50;
     position: relative;
@@ -11,19 +9,16 @@
     height: 100vh;
     width: 100vw;
 }
-
 .con-1 {
     background: url(../img/skybg2.png);
     background-size: cover;
     max-width: 100vw;
 }
-
 .home {
     position: relative;
     top: 40vh;
     height: 20vh;
 }
-
 .name {
     text-shadow: 1px 1px 5px white;
     height: 10vh;
@@ -36,7 +31,6 @@
     font-size: 5vh;
     
 }
-
 .subname {
     width: 40vw;
     display: flex;
@@ -49,7 +43,6 @@
     left: 30vw;
     color:black;
 }
-
 .subtitle {
     width: 40vw;
     height: 5vh;
@@ -64,12 +57,10 @@
     color: black;
     text-shadow: 7px 7px 3px black;
 }
-
 .con-2 {
     background: url(../img/huskybg.jpg);
     background-size: cover;
 }
-
 .cm-pg {
     color: white;
     background-color: rgba(0, 0, 0, 0.576);
@@ -77,64 +68,52 @@
     position: relative;
     top: 0vh;
 }
-
 .cm{
     height: 90vh;
     position: relative;
     top: 10vh;
 }
-
 .about-pg {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s, transform 1s;
 }
-
 .hl {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .headline {
     font-family: 'Open Sans', sans-serif;
     font-weight: 700;
     padding: 0vh 2vw;
 }
-
 .para {
     font-family: 'Montserrat', sans-serif;
     height: 85vh;
     padding: 2vh 10vw 0vh 10vw;
     font-size: 2.3vh;
 }
-
 .extra {
     padding: 1vh 0vw 0vh 0vw;
 }
-
 .con-3 {
     background: url(../img/sandzbg-lg.png);
     background-size: cover;
-
 }
-
 .work {
     background-color: rgba(0, 0, 0, 0.697);
     backdrop-filter: blur(2px);
 }
-
 .work-hl {
     font-size: larger;
     font-family: 'Ysabeau Office', sans-serif;
 }
-
 .topic {
     font-size: large;
     font-family: 'Ysabeau Office', sans-serif;
     position: relative;
 }
-
 .image {
     display: flex;
     flex-wrap: nowrap;
@@ -146,30 +125,25 @@
     height: 55vh;
     width: 90vw;
 }
-
 .image::-webkit-scrollbar {
     display: none;
 }
-
 .slider-item {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 0vh 5vw;
 }
-
 .slider-item img{
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
-
 .slider-number-buttons {
     position: relative;
     top: -13vh;
     text-align: center;
 }
-
 .slider-number-buttons button {
     margin: 5px;
     padding: 5px 10px;
@@ -178,7 +152,6 @@
     cursor: pointer;
     color: black;
 }
-
 .slider-number-buttons button.active {
     box-shadow: 1px 1px 5px whitesmoke;
     font-size: 3.1vh;
@@ -186,30 +159,25 @@
     color: black;
     border: solid #ccc;
 }
-
 .contact {
     background: #f1e9e9;
 }
-
 .join {
     font-weight: 100;
     font-family: 'Cabin', sans-serif;
     padding: 3vh;
     font-size: 3.2vh;
 }
-
 .join-con {
     height: 36.5vh;
     place-items: center;
     padding: 0vh 2vw;
 }
-
 .join-img {
     width: 20vw;
     height: 13vh;
     object-fit: cover;
 }
-
 .text {
     color: black;
     font-family: 'Roboto Condensed', sans-serif;
@@ -220,16 +188,13 @@
     width: 22vw;
     margin-top: 3vh;
 }
-
 .re-text {
     padding: 2vh;
 }
-
 .three-img {
     position: relative;
     top: 1vh;
 }
-
 .proff {
     box-shadow: 1px 1px 15px black;
     position: relative;
@@ -238,13 +203,11 @@
     border-radius: 100px;
     background-color: black;
 }
-
 .reach {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .join-1 {
     border-top: solid black 2px;
     border-bottom: solid black 2px;
@@ -253,13 +216,10 @@
     padding: 1.5vh;
     font-size: 3.2vh;
 }
-
 @media screen and (max-width: 320px) {
-
     .para {
         font-size: 2.15vh;
     }
-
     .extra {
         padding: 1vh 0vw 0vh 0vw;
     }
@@ -267,19 +227,15 @@
         position: relative;
         top: -18vh;
     }
-
     .tuto-1 {
         position: relative;
         left: -1vw;
         width: 22.49vw;
     }
-
     .proff {
         height: 12vh;
     }
-
 }
-
 @media screen and (max-width: 375px) {
     .proff {
         width: 21vw;
@@ -289,15 +245,12 @@
         left: 3vw;
     }
 }
-
 @media screen and (min-width: 424px ){
-
     .para {
         font-size: 2.36vh;
         padding: 3vh 13vw 0vh 13vw;
     }
 }
-
 @media screen and (min-width: 768px) {
     .proff {
         width: 13vw;
@@ -336,11 +289,9 @@
         top: 4vh;
     }
 }
-
 @media screen and (min-width: 1024px) {
     .proff{
         position: relative;
         width: 14vw;
     }
-
 }

@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@600&family=Gruppo&family=Oswald:wght@200;400&family=Plus+Jakarta+Sans:ital,wght@1,800&family=Roboto+Condensed:wght@700&display=swap');
-
 * {
     margin: 0px;
 }
-
 .con {
     position: fixed;
     z-index: 100;
@@ -12,7 +10,6 @@
     font-family: 'Cabin', sans-serif;
     width: 100vw;
 }
-
 .word {
     z-index: 100;
     display: flex;
@@ -23,12 +20,9 @@
     border-bottom: solid whitesmoke;
     text-shadow: 1px 1px 10px rgb(13, 6, 6);
 }
-
 .title {
     z-index: 100;
 }
-
-
 .link {
     font-size: 2vh;
 }
@@ -36,7 +30,6 @@
     color: white;
     text-decoration: none;
 }
-
 .link a:hover {
     transition: 500ms;
     cursor: pointer;
@@ -45,7 +38,6 @@
     transform: scaleY(20%);
     text-shadow: 1px 1px 10px white;
 }
-
 .nav {
     z-index: 100;
     display: flex;
@@ -53,18 +45,11 @@
     align-items: center;
     height: 5vh;
 }
-
 .exp {
     transition: 2s;
     display: none;
 }
-
-
-
-
 @media screen and (max-width: 425px) {
-
-
     .word {
         display: flex;
         justify-content: flex-start;
@@ -74,12 +59,10 @@
     .link {
         display: none;
     }
-
     .nav {
         display: none;
         height: 1vh;
     }
-
     .exp {
         z-index: 100;
         border-radius: 1vh;
@@ -92,26 +75,20 @@
         left: 77vw;
         padding: 0vh 2vw;
     }
-
     .exp a {
         text-decoration: none;
         color: rgba(19, 15, 15, 0.783);
     }
-
     .exp a:hover {
         color: rgba(19, 15, 15, 0.783);
         text-decoration: none;
     }
-
 }
-
 @media screen and (max-width: 320px) {
-
         .exp {
             left: 72vw;
         }
 }
-
 @media screen and (min-width: 768px) {
     .word {
         height: 5vh;
